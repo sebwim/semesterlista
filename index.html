@@ -18,18 +18,20 @@ p {
 <body>
   <p><b>Sommarsemester Countdown</b></p>
   <p id="and"></p>
+  <p id="fig"></p>
   <p id="jen"></p>
   <p id="lot"></p>
   <p id="pat"></p>
   <p id="seb"></p>
   <p id="sta"></p>
+  <p id="wil"></p>
 
 <!-- Sebastian -->
 <script>
 //seb
 
-var sebSemester = new Date("Aug 2, 2019 15:00:00").getTime();
-var sebTillbaka = new Date("Aug 19, 2019 08:00:00").getTime();
+var sebSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var sebTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -71,8 +73,8 @@ var x = setInterval(function() {
 <script>
 //jen
 
-var jenSemester = new Date("Jul 12, 2019 15:00:00").getTime();
-var jenTillbaka = new Date("Aug 14, 2019 08:00:00").getTime();
+var jenSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var jenTillbaka = new Date("Jan 02, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -114,8 +116,8 @@ var x = setInterval(function() {
 <script>
  //pat
 
-var patSemester = new Date("Jul 12, 2019 15:00:00").getTime();
-var patTillbaka = new Date("Aug 07, 2019 08:00:00").getTime();
+var patSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var patTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -157,8 +159,8 @@ var x = setInterval(function() {
 <script>
 //lot
 
-var lotSemester = new Date("Jul 25, 2019 15:00:00").getTime();
-var lotTillbaka = new Date("Aug 06, 2019 08:00:00").getTime();
+var lotSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var lotTillbaka = new Date("Jan 08, 2020 08:00:00").getTime();
 
 // lotta semester numero duo
 // Jul 23, 2019 15:00:00
@@ -204,8 +206,8 @@ var x = setInterval(function() {
 <script>
 //sta
 
-var staSemester = new Date("Jun 19, 2019 15:00:00").getTime();
-var staTillbaka = new Date("Aug 08, 2019 08:00:00").getTime();
+var staSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var staTillbaka = new Date("Jan 13, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -282,6 +284,94 @@ var x = setInterval(function() {
   if (distanceTillbakaAnd < 0) {
       clearInterval(x);
 	  document.getElementById("and").innerHTML = "Sommaren är över för Anders :(";
+	  }
+	  
+}, 1000);
+</script>
+
+<!-- Wille -->
+<script>
+//wil
+
+var wilSemester = new Date("Dec 23, 2019 15:00:00").getTime();
+var wilTillbaka = new Date("Dec 30, 2019 08:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distanceWil = wilSemester - now;
+  var distanceTillbakaWil = wilTillbaka - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var daysWil = Math.floor(distanceWil / (1000 * 60 * 60 * 24));
+  var hoursWil = Math.floor((distanceWil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesWil = Math.floor((distanceWil % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsWil = Math.floor((distanceWil % (1000 * 60)) / 1000);
+  var daysTillbakaWil = Math.floor(distanceTillbakaWil / (1000 * 60 * 60 * 24));
+  var hoursTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("wil").innerHTML = "Wille: " + daysWil + " dagar " + hoursWil + " timmar "
+  + minutesWil + " minuter " + secondsWil + " sekunder ";
+
+  // If the count down is finished, write some text 
+  if (distanceWil < 0) {
+    document.getElementById("wil").innerHTML = "Wille är tillbaka om " + daysTillbakaWil + " dagar " + hoursTillbakaWil + " timmar " + minutesTillbakaWil + " minuter " + secondsTillbakaWil + " sekunder";
+  }
+  
+  if (distanceTillbakaWil < 0) {
+      clearInterval(x);
+	  document.getElementById("wil").innerHTML = "Semester är över för Wille :(";
+	  }
+	  
+}, 1000);
+</script>
+
+<!-- Figge -->
+<script>
+//fig
+
+var figSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var figTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distanceFig = figSemester - now;
+  var distanceTillbakaFig = figTillbaka - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var daysFig = Math.floor(distanceFig / (1000 * 60 * 60 * 24));
+  var hoursFig = Math.floor((distanceFig % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesFig = Math.floor((distanceFig % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsFig = Math.floor((distanceFig % (1000 * 60)) / 1000);
+  var daysTillbakaFig = Math.floor(distanceTillbakaFig / (1000 * 60 * 60 * 24));
+  var hoursTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("fig").innerHTML = "Figge: " + daysFig + " dagar " + hoursFig + " timmar "
+  + minutesFig + " minuter " + secondsFig + " sekunder ";
+
+  // If the count down is finished, write some text 
+  if (distanceFig < 0) {
+    document.getElementById("fig").innerHTML = "Figge är tillbaka om " + daysTillbakaFig + " dagar " + hoursTillbakaFig + " timmar " + minutesTillbakaFig + " minuter " + secondsTillbakaFig + " sekunder";
+  }
+  
+  if (distanceTillbakaFig < 0) {
+      clearInterval(x);
+	  document.getElementById("fig").innerHTML = "Semester är över för Figge :(";
 	  }
 	  
 }, 1000);
