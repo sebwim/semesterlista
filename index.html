@@ -25,6 +25,94 @@ p {
   <p id="seb"></p>
   <p id="sta"></p>
   <p id="wil"></p>
+  
+  <!-- Wille -->
+<script>
+//wil
+
+var wilSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var wilTillbaka = new Date("Dec 30, 2019 08:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distanceWil = wilSemester - now;
+  var distanceTillbakaWil = wilTillbaka - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var daysWil = Math.floor(distanceWil / (1000 * 60 * 60 * 24));
+  var hoursWil = Math.floor((distanceWil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesWil = Math.floor((distanceWil % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsWil = Math.floor((distanceWil % (1000 * 60)) / 1000);
+  var daysTillbakaWil = Math.floor(distanceTillbakaWil / (1000 * 60 * 60 * 24));
+  var hoursTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("wil").innerHTML = "Wille: " + daysWil + " dagar " + hoursWil + " timmar "
+  + minutesWil + " minuter " + secondsWil + " sekunder ";
+
+  // If the count down is finished, write some text 
+  if (distanceWil < 0) {
+    document.getElementById("wil").innerHTML = "Wille är tillbaka om " + daysTillbakaWil + " dagar " + hoursTillbakaWil + " timmar " + minutesTillbakaWil + " minuter " + secondsTillbakaWil + " sekunder";
+  }
+  
+  if (distanceTillbakaWil < 0) {
+      clearInterval(x);
+	  document.getElementById("wil").innerHTML = "Semester är över för Wille :(";
+	  }
+	  
+}, 1000);
+</script>
+  
+ <!-- Figge -->
+<script>
+//fig
+
+var figSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var figTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distanceFig = figSemester - now;
+  var distanceTillbakaFig = figTillbaka - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var daysFig = Math.floor(distanceFig / (1000 * 60 * 60 * 24));
+  var hoursFig = Math.floor((distanceFig % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesFig = Math.floor((distanceFig % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsFig = Math.floor((distanceFig % (1000 * 60)) / 1000);
+  var daysTillbakaFig = Math.floor(distanceTillbakaFig / (1000 * 60 * 60 * 24));
+  var hoursTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("fig").innerHTML = "Figge: " + daysFig + " dagar " + hoursFig + " timmar "
+  + minutesFig + " minuter " + secondsFig + " sekunder ";
+
+  // If the count down is finished, write some text 
+  if (distanceFig < 0) {
+    document.getElementById("fig").innerHTML = "Figge är tillbaka om " + daysTillbakaFig + " dagar " + hoursTillbakaFig + " timmar " + minutesTillbakaFig + " minuter " + secondsTillbakaFig + " sekunder";
+  }
+  
+  if (distanceTillbakaFig < 0) {
+      clearInterval(x);
+	  document.getElementById("fig").innerHTML = "Semester är över för Figge :(";
+	  }
+	  
+}, 1000);
+</script>
 
 <!-- Sebastian -->
 <script>
@@ -55,7 +143,7 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("seb").innerHTML = "Sebastian: " + daysSeb + " dagar " + hoursSeb + " timmar "
-  + minutesSeb + " minuter och " + secondsSeb + " sekunder.";
+  + minutesSeb + " minuter och " + secondsSeb + " sekunder";
 
   // If the count down is finished, write some text 
   if (distanceSeb < 0){
@@ -98,7 +186,7 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("jen").innerHTML = "Jens: " + daysJen + " dagar " + hoursJen + " timmar "
-  + minutesJen + " minuter och " + secondsJen + " sekunder.";
+  + minutesJen + " minuter och " + secondsJen + " sekunder";
 
   // If the count down is finished, write some text 
   if (distanceJen < 0){
@@ -141,7 +229,7 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("pat").innerHTML = "Patrik: " + daysPat + " dagar " + hoursPat + " timmar "
-  + minutesPat + " minuter och " + secondsPat + " sekunder.";
+  + minutesPat + " minuter och " + secondsPat + " sekunder";
 
   // If the count down is finished, write some text 
   if (distancePat < 0){
@@ -188,7 +276,7 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("lot").innerHTML = "Lotta: " + daysLot + " dagar " + hoursLot + " timmar "
-  + minutesLot + " minuter och " + secondsLot + " sekunder.";
+  + minutesLot + " minuter och " + secondsLot + " sekunder";
 
   // If the count down is finished, write some text 
   if (distanceLot < 0){
@@ -231,7 +319,7 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("sta").innerHTML = "Staffan: " + daysSta + " dagar " + hoursSta + " timmar "
-  + minutesSta + " minuter och " + secondsSta + " sekunder.";
+  + minutesSta + " minuter och " + secondsSta + " sekunder";
 
   // If the count down is finished, write some text 
   if (distanceSta < 0){
@@ -249,8 +337,8 @@ var x = setInterval(function() {
 <script>
 //and
 
-var andSemester = new Date("Jul 05, 2019 15:00:00").getTime();
-var andTillbaka = new Date("Aug 12, 2019 08:00:00").getTime();
+var andSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var andTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -283,99 +371,12 @@ var x = setInterval(function() {
   
   if (distanceTillbakaAnd < 0) {
       clearInterval(x);
-	  document.getElementById("and").innerHTML = "Sommaren är över för Anders :(";
+	  document.getElementById("and").innerHTML = "Semester är över för Anders :(";
 	  }
 	  
 }, 1000);
 </script>
 
-<!-- Wille -->
-<script>
-//wil
-
-var wilSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var wilTillbaka = new Date("Dec 30, 2019 08:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distanceWil = wilSemester - now;
-  var distanceTillbakaWil = wilTillbaka - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var daysWil = Math.floor(distanceWil / (1000 * 60 * 60 * 24));
-  var hoursWil = Math.floor((distanceWil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesWil = Math.floor((distanceWil % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsWil = Math.floor((distanceWil % (1000 * 60)) / 1000);
-  var daysTillbakaWil = Math.floor(distanceTillbakaWil / (1000 * 60 * 60 * 24));
-  var hoursTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsTillbakaWil = Math.floor((distanceTillbakaWil % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("wil").innerHTML = "Wille: " + daysWil + " dagar " + hoursWil + " timmar "
-  + minutesWil + " minuter " + secondsWil + " sekunder ";
-
-  // If the count down is finished, write some text 
-  if (distanceWil < 0) {
-    document.getElementById("wil").innerHTML = "Wille är tillbaka om " + daysTillbakaWil + " dagar " + hoursTillbakaWil + " timmar " + minutesTillbakaWil + " minuter " + secondsTillbakaWil + " sekunder";
-  }
-  
-  if (distanceTillbakaWil < 0) {
-      clearInterval(x);
-	  document.getElementById("wil").innerHTML = "Semester är över för Wille :(";
-	  }
-	  
-}, 1000);
-</script>
-
-<!-- Figge -->
-<script>
-//fig
-
-var figSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var figTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distanceFig = figSemester - now;
-  var distanceTillbakaFig = figTillbaka - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var daysFig = Math.floor(distanceFig / (1000 * 60 * 60 * 24));
-  var hoursFig = Math.floor((distanceFig % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesFig = Math.floor((distanceFig % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsFig = Math.floor((distanceFig % (1000 * 60)) / 1000);
-  var daysTillbakaFig = Math.floor(distanceTillbakaFig / (1000 * 60 * 60 * 24));
-  var hoursTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsTillbakaFig = Math.floor((distanceTillbakaFig % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("fig").innerHTML = "Figge: " + daysFig + " dagar " + hoursFig + " timmar "
-  + minutesFig + " minuter " + secondsFig + " sekunder ";
-
-  // If the count down is finished, write some text 
-  if (distanceFig < 0) {
-    document.getElementById("fig").innerHTML = "Figge är tillbaka om " + daysTillbakaFig + " dagar " + hoursTillbakaFig + " timmar " + minutesTillbakaFig + " minuter " + secondsTillbakaFig + " sekunder";
-  }
-  
-  if (distanceTillbakaFig < 0) {
-      clearInterval(x);
-	  document.getElementById("fig").innerHTML = "Semester är över för Figge :(";
-	  }
-	  
-}, 1000);
-</script>
 
 </body>
 </html>
