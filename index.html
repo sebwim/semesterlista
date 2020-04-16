@@ -16,22 +16,52 @@ p {
 
 
 <body>
-  <p><b>Semester Countdown</b></p>
+  <p><b>Sommarsemester 2020 Countdown</b></p>
   <p id="and"></p>
-  <p id="fig"></p>
-  <p id="jen"></p>
+  <p><b>Team 1</b></p>
+  <p id="eli"></p>
   <p id="lot"></p>
-  <p id="pat"></p>
-  <p id="seb"></p>
   <p id="sta"></p>
   <p id="wil"></p>
+  <p><b>Team 2</b></p>
+  <p id="fig"></p>
+  <p id="jen"></p>
+  <p id="pat"></p>
+  <p id="seb"></p>
+  
+  
+  <!---
+  
+  Lotta:
+09.07 - 05.08
+
+Patrik:
+10.07 - 07.01
+
+Sebastian:
+27.07 - 14.08
+
+Elias:
+29.06 - 10-07
+27.07 - 07.08
+
+Jens:
+13.07 - 11.08
+
+Robert:
+13.07 - 07.08
+
+Wille:
+18.09
+
+--->
   
   <!-- Wille -->
 <script>
 //wil
 
-var wilSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var wilTillbaka = new Date("Dec 30, 2019 08:00:00").getTime();
+var wilSemester = new Date("Sep 17, 2020 15:00:00").getTime();
+var wilTillbaka = new Date("Sep 19, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -74,8 +104,8 @@ var x = setInterval(function() {
 <script>
 //fig
 
-var figSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var figTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
+var figSemester = new Date("Jul 10, 2020 15:00:00").getTime();
+var figTillbaka = new Date("Aug 10, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -118,8 +148,8 @@ var x = setInterval(function() {
 <script>
 //seb
 
-var sebSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var sebTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
+var sebSemester = new Date("Jul 24, 2020 15:00:00").getTime();
+var sebTillbaka = new Date("Aug 17, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -161,8 +191,8 @@ var x = setInterval(function() {
 <script>
 //jen
 
-var jenSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var jenTillbaka = new Date("Jan 02, 2020 08:00:00").getTime();
+var jenSemester = new Date("Jul 10, 2020 15:00:00").getTime();
+var jenTillbaka = new Date("Aug 12, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -204,8 +234,8 @@ var x = setInterval(function() {
 <script>
  //pat
 
-var patSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var patTillbaka = new Date("Jan 07, 2020 08:00:00").getTime();
+var patSemester = new Date("Jul 09, 2020 15:00:00").getTime();
+var patTillbaka = new Date("Jan 07, 2021 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -247,12 +277,8 @@ var x = setInterval(function() {
 <script>
 //lot
 
-var lotSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var lotTillbaka = new Date("Jan 08, 2020 08:00:00").getTime();
-
-// lotta semester numero duo
-// Jul 23, 2019 15:00:00
-// Aug 06, 2019 08:00:00
+var lotSemester = new Date("Jul 08, 2020 15:00:00").getTime();
+var lotTillbaka = new Date("Aug 06, 2020 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -286,49 +312,6 @@ var x = setInterval(function() {
   if (distanceTillbakaLot < 0) {
     clearInterval(x);
     document.getElementById("lot").innerHTML = "Semester är över för Lotta :(";
-  }
-}, 1000);
-</script>
-
-<!-- Staffan -->
-<script>
-//sta
-
-var staSemester = new Date("Dec 20, 2019 15:00:00").getTime();
-var staTillbaka = new Date("Jan 13, 2020 08:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distanceSta = staSemester - now;
-  var distanceTillbakaSta = staTillbaka - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var daysSta = Math.floor(distanceSta / (1000 * 60 * 60 * 24));
-  var hoursSta = Math.floor((distanceSta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesSta = Math.floor((distanceSta % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsSta = Math.floor((distanceSta % (1000 * 60)) / 1000);
-  var daysTillbakaSta = Math.floor(distanceTillbakaSta / (1000 * 60 * 60 * 24));
-  var hoursTillbakaSta = Math.floor((distanceTillbakaSta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesTillbakaSta = Math.floor((distanceTillbakaSta % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsTillbakaSta = Math.floor((distanceTillbakaSta % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("sta").innerHTML = "Staffan: " + daysSta + " dagar " + hoursSta + " timmar "
-  + minutesSta + " minuter och " + secondsSta + " sekunder";
-
-  // If the count down is finished, write some text 
-  if (distanceSta < 0){
-	document.getElementById("sta").innerHTML = "Staffan är tillbaka om " + daysTillbakaSta + " dagar " + hoursTillbakaSta + " timmar " + minutesTillbakaSta + " minuter " + secondsTillbakaSta + " sekunder";
-  }
-  
-  if (distanceTillbakaSta < 0) {
-    clearInterval(x);
-    document.getElementById("sta").innerHTML = "Semester är över för Staffan :(";
   }
 }, 1000);
 </script>
@@ -371,12 +354,97 @@ var x = setInterval(function() {
   
   if (distanceTillbakaAnd < 0) {
       clearInterval(x);
-	  document.getElementById("and").innerHTML = "Semester är över för Anders :(";
+	  document.getElementById("and").innerHTML = "Semester för Anders saknas.";
 	  }
 	  
 }, 1000);
 </script>
 
+<!-- Elias -->
+<script>
+//eli
+
+var eliSemester = new Date("Jun 26, 2020 15:00:00").getTime();
+var eliTillbaka = new Date("Jul 13, 2020 08:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distanceEli = eliSemester - now;
+  var distanceTillbakaEli = eliTillbaka - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var daysEli = Math.floor(distanceEli / (1000 * 60 * 60 * 24));
+  var hoursEli = Math.floor((distanceEli % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesEli = Math.floor((distanceEli % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsEli = Math.floor((distanceEli % (1000 * 60)) / 1000);
+  var daysTillbakaEli = Math.floor(distanceTillbakaEli / (1000 * 60 * 60 * 24));
+  var hoursTillbakaEli = Math.floor((distanceTillbakaEli % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesTillbakaEli = Math.floor((distanceTillbakaEli % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsTillbakaEli = Math.floor((distanceTillbakaEli % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("eli").innerHTML = "Elias: " + daysEli + " dagar " + hoursEli + " timmar "
+  + minutesEli + " minuter och " + secondsEli + " sekunder";
+
+  // If the count down is finished, write some text 
+  if (distanceEli < 0){
+	document.getElementById("eli").innerHTML = "Elias är tillbaka om " + daysTillbakaEli + " dagar " + hoursTillbakaEli + " timmar " + minutesTillbakaEli + " minuter " + secondsTillbakaEli + " sekunder";
+  }
+  
+  if (distanceTillbakaEli < 0) {
+    clearInterval(x);
+    document.getElementById("eli").innerHTML = "Semester för Elias saknas.";
+  }
+}, 1000);
+</script>
+
+<!-- Staffan -->
+<script>
+//sta
+
+var staSemester = new Date("Dec 20, 2019 15:00:00").getTime();
+var staTillbaka = new Date("Jan 13, 2020 08:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distanceSta = staSemester - now;
+  var distanceTillbakaSta = staTillbaka - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var daysSta = Math.floor(distanceSta / (1000 * 60 * 60 * 24));
+  var hoursSta = Math.floor((distanceSta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesSta = Math.floor((distanceSta % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsSta = Math.floor((distanceSta % (1000 * 60)) / 1000);
+  var daysTillbakaSta = Math.floor(distanceTillbakaSta / (1000 * 60 * 60 * 24));
+  var hoursTillbakaSta = Math.floor((distanceTillbakaSta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesTillbakaSta = Math.floor((distanceTillbakaSta % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsTillbakaSta = Math.floor((distanceTillbakaSta % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("sta").innerHTML = "Staffan: " + daysSta + " dagar " + hoursSta + " timmar "
+  + minutesSta + " minuter och " + secondsSta + " sekunder";
+
+  // If the count down is finished, write some text 
+  if (distanceSta < 0){
+	document.getElementById("sta").innerHTML = "Staffan är tillbaka om " + daysTillbakaSta + " dagar " + hoursTillbakaSta + " timmar " + minutesTillbakaSta + " minuter " + secondsTillbakaSta + " sekunder";
+  }
+  
+  if (distanceTillbakaSta < 0) {
+    clearInterval(x);
+    document.getElementById("sta").innerHTML = "Semester för Staffan saknas.";
+  }
+}, 1000);
+</script>
 
 </body>
 </html>
